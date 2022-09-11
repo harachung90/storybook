@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>To-Do List App</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+        var list = document.getElementById("list");
+
+        function addItem() {
+            var newItem = document.createElement("div");
+            newItem.innerHTML = document.getElementById("box").value;
+            newItem.onclick = removeItem;
+            document.getElementById("list").appendChild(newItem);
+            saveList();
+        }
+
+        function removeItem() {
+            document.getElementById("list").removeChild(this);
+            saveList();
+        }
+
+        function saveList() {
+            localStorage.storedList = document.getElementById("list").innerHTML;
+        }
+
+        function loadList() {
+            document.getElementById("list").innerHTML = localStorage.storedList;
+            for (var i = 0; i < list.children.length; i++) {
+                list.children[i].onclick = removeItem;
+            }
+        }
+    </script>
 </head>
 <body>
+    <p>To-Do List</p>
+    <input type="text" id="box" placeholder="Type here to add task"></input> <br/>
+    <input type="button" value="Add item" onclick="addItem();"></input> <br/>
+    <div id="list">
 
+    </div>
+
+    <script>
+        if (localStorage.storedList) {
+            loadList;
+        }
+    </script>
 </body>
 </html>
