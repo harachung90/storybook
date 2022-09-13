@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Game</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+/*        var count = 0;
+        function updateCount() {{
+            count += 1;
+            document.getElementById("number").innerHTML = count;
+            setTimeout(updateCount, 1000);
+        }}*/
+    </script>
+</head>
+<body>
+    <input type="button" value="Play" onclick="startGame();">
+    <div id="board">
+        <div class="character">1</div>
+        <div class="character">2</div>
+        <div class="character">3</div>
+        <div class="character">4</div>
+        <div class="character">5</div>
+        <div class="character">6</div>
+    </div>
+    <div id="number">
+    </div>
+<!--    <script>
+        updateCount();
+    </script>-->
+
+    <script>
+        function startGame() {
+            gameLoop();
+        }
+
+        var loops = 0;
+
+        function gameLoop() {
+            loops++;
+            if (loops < 12 ) {
+                setTimeout(gameLoop, 3000);
+            } else {
+                alert("Game over!");
+            }
+        }
+
+    </script>
+</body>
+</html>
