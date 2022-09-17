@@ -27,3 +27,7 @@ body {
 .visible {
     display: block;
 }
+
+.thief {
+    background-color: red;
+}
