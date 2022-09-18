@@ -5,19 +5,22 @@ body {
 
 #board {
     border: 1px solid black;
-    background-color: gray;
+    background: url("images/GameBackground.jpeg");
+    background-size: cover;
     height: 350px;
     width: 650px;
     margin-top: 20px;
 }
 
 .character {
-    background-color: lightblue;
+    background: url("images/Guest.jpeg");
+    background-size: cover;
     width: 120px;
     height: 120px;
     padding: 10px;
     margin: 10px;
     float: left;
+    display: none;
 }
 
 .hidden {
@@ -29,5 +32,6 @@ body {
 }
 
 .thief {
-    background-color: red;
+    background: url("images/Thief.jpeg");
+    background-size: cover;
 }
