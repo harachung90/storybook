@@ -56,9 +56,9 @@ div {
 }
 
 .hero {
-    height: 400px;
+
     padding: 0px;
-    background: url("images/DiamondBanner.jpeg");
+
     background-size: cover;
     text-align: center;
 }
